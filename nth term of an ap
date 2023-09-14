@@ -1,0 +1,13 @@
+int nterm(int num){
+    int term = 3*num+7;
+    return term;
+    
+}
+
+int main(){
+    int n;
+    cout<<"enter the value of number"<<endl;
+    cin>>n;
+    
+    cout<<"nth term of your program is : "<< nterm(n) <<endl;
+}
