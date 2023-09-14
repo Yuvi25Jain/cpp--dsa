@@ -1,20 +1,30 @@
-bool isEven (int a){
-    if(a%2){
-        return 1;
+int factorial(int n){
+    int fact =1;
+    for(int i=1; i<=n; i++){
+        fact = fact*i;
     }
+    return fact;
+
+}
+
+int nCr(int n, int r){
+    int nr = factorial(n);
+    int dr= factorial(r)* factorial(n-r);
+    return nr/dr;
+}
+
+
+int main(){
+    int n, r;
+    cout<<"Enter the value of n"<<endl;
+    cin>>n;
+    
+    cout<<"Enter the value of r"<<endl;
+    cin>>r;
+    
+
+    cout<<"So here is your Answer of ncr factorial is : "<< nCr(n,r)<<endl;
+    
     return 0;
 }
 
-int main(){
-    int num;
-    cout<<"enter the num"<<endl;
-    cin>>num;
-    
-    if (isEven(num)){
-        cout<<"odd";
-    }
-    else{
-        cout<<"even";
-    }
-    
-}
