@@ -1,0 +1,15 @@
+void Printcounting(int n){
+    for(int i=1; i<=n; i++){
+        cout<<i<<endl;
+    }
+
+}
+
+int main(){
+    int n;
+    cout<<"You should enter the value of n: "<<endl;
+    cin>>n;
+    cout<<"bingo your counting of given no is heree have a look :)"<<endl;
+    Printcounting(n);
+     return 0;
+     }
