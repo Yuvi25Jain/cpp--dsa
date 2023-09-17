@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+/* function defining*/
+int binarySearch(int arr[], int n, int key){
+    /*here n refers size of array, key is number we want to search*/
+    int start = 0;
+    int end = n-1;
+    int mid = (start+end)/2; /* here mid of indexs will be taken*/
+    while(start <= end){
+        if(arr[mid] == key){
+            return mid;
+        }
+        if(key > arr[mid]){
+            /* if key no is greater then mid number then it will search in right part and vice versa.*/
+            start = mid+1;
+        }
+        else{
+            end = mid-1;
+            /*left part searching*/
+        }
+        mid = (start+ end)/2; /* here is mid is updated because since we either searched right or left part . so afterwards indexes will change again until key==mid*/
+    }
+    return -1;
+}
+
+
+int main(){
+    int even[6] = {21,22,32,64,45,45};
+    int odd[5] = {21,32,32,64,45};
+    
+    int index = binarySearch(even, 6 ,50);
+    cout<<"index of given key in the given array is/are:  "<<index<<endl;
+    
+    int index1 = binarySearch(odd, 5, 56);
+    cout<<"index of given key in the given array is/are:  "<<index1<<endl;
+    
+}
+
+
+
+/*for better optimisation of code use mid formula = start + (end-start)/2
+as it will ultimately give the (start+end/2)*/
