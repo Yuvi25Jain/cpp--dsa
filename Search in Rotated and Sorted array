@@ -1,0 +1,61 @@
+Basic concept:
+Sorted array = {1,2,3,7,9}
+Rotated array = {7,9,1,2,3}
+Where answer lie : 2nd line (graphical representation of monotonic(strictly increasing graph)
+Why : if we can't do it with pivot function we need to do binary search twice.  Here below only one time binary search will be done.
+
+Implement :
+int getPivot(vector<int>& arr, int n){ //pivoting to find min number in array
+    int s = 0;
+    int e = n-1;
+    int mid = s +(e-s)/2;
+    while(s<e){
+        if(arr[mid] >= arr[0]){
+            s = mid+1; //right side shift
+        }
+        else{
+            e = mid;
+        }
+        mid = s +(e-s)/2;
+        
+    }
+    return s;
+}
+int binarySearch(vector<int>& arr, int s,int e, int key){
+    /*here n refers size of array, key is number we want to search*/
+    int start = s;
+    int end = e;
+    int mid = (start+end)/2; /* here mid of indexs will be taken*/
+    while(start <= end){
+        if(arr[mid] == key){
+            return mid;
+        }
+        if(key > arr[mid]){
+            /* if key no is greater then mid number then it will search in right part and vice versa.*/
+            start = mid+1;
+        }
+        else{
+            end = mid-1;
+            /*left part searching*/
+        }
+        mid = (start+ end)/2; /* here is mid is updated because since we either searched right or left part . so afterwards indexes will change again until key==mid*/
+    }
+    return -1;
+}
+
+
+
+
+
+
+int search(vector<int>& arr, int n, int k)
+{
+    int pivot = getPivot(arr,n) ;
+    if (k >= arr[pivot] && k<=arr[n-1]){
+        return binarySearch(arr,pivot, n-1, k); // cond true i.e ans should be lie in 2nd line
+    }
+    else{
+        return binarySearch(arr,0, pivot-1, k); // search in 1st line
+
+    }
+}
