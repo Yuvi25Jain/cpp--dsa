@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+//pivot here in simple word stands for min value of either sorted (inc) or rotated arr (last two digit swap on 1st and 2nd position). output will be index of min element.
+
+
+
+
+int getPivot(int arr[], int n){
+    int s = 0;
+    int e = n-1;
+    int mid = s +(e-s)/2;
+    while(s<e){
+        if(arr[mid] >= arr[0]){
+            s = mid+1; //right side shift
+        }
+        else{
+            e = mid;
+        }
+        mid = s +(e-s)/2;
+        
+    }
+    return s;
+}
+    int main(){
+     int piv[5] = {12,13,4,65,45};
+     cout<<"pivot element index is:  "<<getPivot(piv,5) <<endl;
+        
+    
+    
+    
+    return 0; 
+    
+    };
