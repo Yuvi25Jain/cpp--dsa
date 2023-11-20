@@ -1,0 +1,20 @@
+int main(){ 
+    string input;
+  int countVowels = 0;
+
+  input = "Hello, World!"; //string
+    int i;
+
+
+  for (int i = 0; i < static_cast<int>(input.length()); i++) {
+note : here input.length is unsigned integer which is being compared with the i which is signed integer... during compare small integer i will directly implicit the input function , to get rid we use static_cast<int>
+    char ch = input[i];
+    if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
+      countVowels++;
+    }
+  }
+
+  cout << "Number of vowels: " << countVowels << endl;
+
+  return 0;
+}
