@@ -1,0 +1,17 @@
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int a = 15;
+    int b = 13;
+    int c = 12;
+    
+    if (a>b && a>c ){
+        cout<<a<<endl;
+        }
+    if (a>c && b>c){
+        cout<<c<<endl;
+        }
+       
+    return 0;
+}
+
+here we used conditional relation but we have to use pointers
