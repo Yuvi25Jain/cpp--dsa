@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+void reverse (char name[], int n){
+    int s=0;
+    int e = n-1;
+    while(s<e){
+        swap(name[s++], name[e--]);
+    }
+}
+
+int getlength (char name[]){
+    int count =0;
+    for(int i=0; name[i] != '\0';i++){
+        count++;
+    }
+    return count;
+}
+
+int main()
+{
+    char name[20];
+    cout<<"enter your name: "<<endl;
+    cin>>name;
+    
+    //cout<<"your name lenght is "<<endl;
+    int len = getlength(name);
+    
+    cout<<"your name in reverse "<<endl;
+    
+    reverse(name,len); //note : here reverse is void value. to print a revrese string use name 
+    cout<<name;
+    
+
+    return 0;
+}
+
+
+leetcode link: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFY2SHEwbzlKZ05TTkwyc1kzVEgwbGtLdjB3d3xBQ3Jtc0tuX0lkODhETGMtVEpUSFRYSE5jSVhZZ2xzaGEwM0xCNFhQdkg4aTZLYnc2by0teUZnN0ktVk9GX2k3MTBrNHZ4aVlxZnJnSGJsQmYzZGZ5NG9EVDFJaVpoQWY2Nk1UeUY1UGJkM0pxcklLb3dGZjY3cw&q=https%3A%2F%2Fleetcode.com%2Fproblems%2Freverse-string%2F&v=Wdjr6uoZ0e0
+
+
+leetcode solution link: 
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        int st =0;
+    int e = s.size()-1;
+    while(st<e){
+        swap(s[st++], s[e--]);
+    }
+}
+        
+    };
