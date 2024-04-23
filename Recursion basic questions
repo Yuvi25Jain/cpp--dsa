@@ -1,0 +1,130 @@
+Q1. Printing name n times
+
+void name(int i, int n){
+  if (i>n) return ;
+  cout<<"Yuvanshi"<<endl;
+  name(i+1,n)
+
+  int main(){
+    int n;
+    cin>>n;
+    name(1,n)
+    return 0;
+
+
+Q2. Printing n to 1 :
+    void rev(int i, int n){
+    if(i<1) return ;
+    cout<<i;
+    rev(i-1 , n);
+    
+}
+int main(){
+    int n;
+    cout<<"Enter the value of n: "<<endl;
+    cin>>n;
+    cout<<"N to 1 series: "<<endl;
+    rev(n,n);
+    return 0;
+    
+}
+
+
+Q3. Summation of n natural no:
+    int sumation(int n){
+    int sum = 0;
+    for(int i =1; i<=n; i++){
+        sum+=i;
+        
+    }
+   
+    
+    return sum;
+    
+}
+int main(){
+    int ans = sumation(5);
+    cout<<ans;
+    return 0;
+    
+}
+
+
+Q4. factorial of a no:
+
+    void fact(int n){
+    int fact = 1;
+    for(int i=1; i<=n;i++){
+        fact*=i;
+        
+        
+    }
+    cout<<fact;
+    
+}
+int main(){
+    int n;
+    cout<<"Enter the value of n :  "<<endl;
+    cin>>n;
+    fact(n);
+    return 0;
+    
+}
+
+Q5. reverse of an array
+
+    #include <iostream>
+using namespace std;
+//Function to print array
+void printArray(int ans[], int n) {
+  cout << "The reversed array is:- " << endl;
+   for (int i = 0; i < n; i++) {
+      cout << ans[i] << " ";
+   }
+}
+//Function to reverse array using an auxiliary array
+void reverseArray(int arr[], int n) {
+   int ans[n];
+   for (int i = n - 1; i >= 0; i--) {
+      ans[n - i - 1] = arr[i];
+   }
+   printArray(ans, n);
+}
+int main() {
+   int n = 5;
+   int arr[] = {5,4,3,2,1};
+   reverseArray(arr, n);
+   return 0;
+}
+
+
+    explaination : see starting and ending element will be swap now first element shift to last element and vice versa
+    s>=e : terminate
+  s+1 and e-1 : will reverse the number except extreme ones
+
+    Q6. Fibonnaci series 
+    #include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int n = 5;
+	if (n == 0) {
+	    cout<<"The Fibonacci Series up to "<<n<<"th term:"<<endl;
+		cout << 0;
+	}
+	else {
+		int secondLast = 0;//for (i-2)th term
+		int last = 1;//for (i-1)th term
+		cout<<"The Fibonacci Series up to "<<n<<"th term:"<<endl;
+		cout << secondLast << " " << last << " ";
+		int cur; //for ith term
+		for (int i = 2; i <= n; i++) {
+			cur = last + secondLast;
+			secondLast = last;
+			last = cur;
+			cout << cur << " ";
+		}
+	}
+}
+
+    
+    
