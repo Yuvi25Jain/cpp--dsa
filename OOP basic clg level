@@ -1,0 +1,35 @@
+// function overloading 
+#include <iostream>
+using namespace std;
+
+class Sum{
+    public:
+    void add(int x, int y){
+        int sum = x+y;
+        cout<<sum<<endl;
+    }
+    int add(int x, int y, int z){
+        int sum = x+y+z;
+        return sum;
+        
+        
+    }
+    float add(float x, float y){
+        float sum = x+y;
+        return sum;
+    }
+    
+};
+
+int main()
+{
+    Sum s;
+    s.add(2,3);
+    int ans = s.add(25,05,2005);
+    cout<<ans;
+    float ans2 = s.add(float(2.5), float(23.2));
+    cout<<ans2;
+    
+
+    return 0;
+}
