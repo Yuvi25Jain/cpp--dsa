@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    
+    int n = 0;
+    cout<<"enter number of lines: "<<endl;
+    cin>>n;
+    for(int i= 0; i<=n;i++){
+        for(int j= 0; j<i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+
+
+for flipped pattern
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    for(int i= 0; i<n;i++){
+        for(int j=1; j<n+1-i;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+
+    return 0;
+}
+
+note you are commiting mistake in j it is not less than equal to n+1-i but it is only less than n+1-i
