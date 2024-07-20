@@ -1,0 +1,70 @@
+using for loop
+
+//to find the sum of next 10 numbers entred by user
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int total = 0;
+    for(int i=1;i<=10;i++){
+        n++;
+        total = total +n;
+    }
+  
+    cout<<"sum of next 10 digits are: "<<total<<endl;
+
+    return 0;
+}
+
+
+using while loop
+//to find the sum of next 5 numbers entred by user
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int total = 0;
+    int i =1;
+    while(i<=5){
+        n++;
+        total = total + n;
+        i++;
+        
+    }
+  
+    cout<<"sum of next 5 digits are: "<<total<<endl;
+
+    return 0;
+}
+
+do while loop :
+//to find the sum of next 5 numbers entred by user
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int total = 0;
+    int i =1;
+    do{
+        n++;
+        total = total +n;
+        i++;
+    }while(i<=5);
+  
+    cout<<"sum of next 5 digits are: "<<total<<endl;
+
+    return 0;
+}
+
+
+your mistake : your ignoring i increment in while and do while loop.
+
