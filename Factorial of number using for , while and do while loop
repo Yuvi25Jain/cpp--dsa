@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+
+
+int main()
+{
+    int n = 0 , fact = 1;
+    cout<<"enter the value of number: "<<endl;
+    cin>>n;
+    int i =1;
+    /*for(int i=1; i<=n; i++){
+        fact = fact*i;
+        
+    }
+    cout<<fact;*/
+    
+    /*while(i<=n){
+        fact = fact*i;
+        i++;
+    }
+    cout<<"factorial of "<<n<<" is: "<<fact;*/
+    
+    do{
+        fact= fact*i;
+        i++;
+        
+    }while(i<=n);
+    cout<<"factorial of "<<n<<" is: "<<fact;
+    
+    
+
+    return 0;
+}
