@@ -1,0 +1,52 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+//wap to take i/p : first , last name ...concate them with address
+
+int main(){
+	string firstn , lastn, address;
+	cout<<"enter first name: "<<endl;
+	getline(cin,firstn);
+	cout<<"enter last name: "<<endl;
+	getline(cin,firstn);
+	cout<<"enter address : "<<endl;
+	getline(cin,address);
+	
+	//to take input including space also use getline
+	
+	
+	string fulln = firstn + lastn;
+	cout<<"Your full name is : "<<fulln<<address<<endl;
+	
+	
+	
+	
+	
+	
+	return 0;
+	
+}
+
+//learning : either include getline for firstn and lastn 
+// or before getlne address use cin.ignore() : consume the newline character left in input  buffer.
+// using cin.ignore 
+//	cin.ignore() is a function in C++ that helps to ignore (or skip) a character in the input buffer. Why do we need cin.ignore()?
+//When you use cin to read input from the user, it leaves a newline character (\n) in the input buffer. This newline character can cause problems when you try to read more input using getline or other functions.
+//Think of it like this:Imagine you're typing your name on a piece of paper, and then you press Enter. The Enter key leaves a "newline" mark on the paper. If you then try to write your address on the same paper, the pen will start writing from the newline mark, not from the beginning of the line.
+//What cin.ignore() does:
+//cin.ignore() is like erasing the newline mark on the paper. It tells the computer to ignore the newline character that's left in the input buffer, so that the next input can start fresh.
+//When to use cin.ignore()?
+//You typically use cin.ignore() after reading input with cin, and before reading more input with getline or other functions that might be affected by the newline character.
+	
+	
+//the above code can also be written as and will produce the same output.
+//cout<<"enter first name: "<<endl;
+//	cin>>firstn;
+//	cout<<"enter last name: "<<endl;
+//	cin>>lastn;
+//	cin.ignore() or cin.get(); //consume newline character
+//	cout<<"enter address : "<<endl;
+//	getline(cin,address);
+//	
+	
