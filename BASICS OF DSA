@@ -1,0 +1,17 @@
+#BASICS OF DSA
+
+1. ARRAY:
+collection of similar type data sotred at contiguos blocks of memory.
+random access of data
+int a[6] = {10,20}
+advantage of array is we can access the element in constant time i.e it has time complexcity of O(1
+)
+
+2. LINKED LIST:
+collection of elements but elements are not stored at continuous memory. it contain only element along with address .
+
+3.  STACK :
+it is linear data structure that follow last in first out. insertion(push) and removal(pop)
+
+4. QUEUE:
+linear data structure first in first out. insertion push and removal pop. 
