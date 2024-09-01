@@ -1,0 +1,37 @@
+NOTE: READ BASIC THOERY FROM NOTES BASICALLY LAST IN FIRST OUT
+
+#include <iostream>
+#include<stack>
+#include<vector>
+
+using namespace std;
+int main()
+{
+  stack<string> yuvanshi;
+
+  //inserting values
+  yuvanshi.push("i ");
+  yuvanshi.push("love ");
+  yuvanshi.push("you");
+  yuvanshi.push("yukti");
+
+  cout<<"top element: "<<yuvanshi.top()<<endl;
+
+  vector<string> temp;
+  while(!yuvanshi.empty()){
+    temp.push_back(yuvanshi.top());
+    yuvanshi.pop();
+  }
+
+  //iterate over the temporarary vector
+/*for (const auto& element : temp): This is the range-based for loop syntax. It's saying "iterate over the elements of temp and assign each element to a variable named element".
+
+const auto& element: This is the declaration of the loop variable element. The const keyword means that the variable is constant and cannot be modified. The auto keyword means that the type of the variable will be automatically deduced by the compiler. The & symbol means that the variable is a reference to the original element in the vector, rather than a copy.
+
+: temp: This specifies the range that the loop will iterate over. In this case, it's the temp vector.
+std::cout << element << std::endl;: This is the body of the loop. It's printing each element to the console using std::cout.*/
+  for(const auto& element : temp){
+    cout<<element<<endl;
+  }
+  return 0;
+}
