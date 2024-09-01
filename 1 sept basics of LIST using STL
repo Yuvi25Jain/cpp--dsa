@@ -1,0 +1,40 @@
+NOTE READ THEORY AND FOLLOWING FEATURES FROM NOTES.
+
+#include <iostream>
+#include<list>
+using namespace std;
+int main()
+
+{//declaration
+  std::list<int> yuvanshi = {1,2,3};
+  //method intialising pointer i 
+  list<int>::iterator i = yuvanshi.begin();
+
+  std::advance(i,2);//points to 2nd index
+  
+  //insertion 25 at 2nd index
+  yuvanshi.insert(i,25);
+
+
+  yuvanshi.push_back(94); //will add 94 at the end of list
+  yuvanshi.push_front(19);//will add 19 at the front of list.
+  yuvanshi.pop_back(); //removes last element of list
+  yuvanshi.pop_front();//removes front element of list
+
+  yuvanshi.reverse(); //reverses the list
+
+  //swap yukti.swap(yuvanshi)
+
+  yuvanshi.size(); //no of element in list.
+
+  yuvanshi.sort(); //sort the list
+ 
+  //printing the list
+
+  for(list <int>::iterator i = yuvanshi.begin() ; i!= yuvanshi.end();i++ )
+  {
+
+    cout<<*i<<" "; //printing list
+  };
+  return 0;
+}
